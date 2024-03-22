@@ -1,0 +1,2 @@
+-- Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.
+SELECT t.title FROM tv_shows t INNER JOIN tv_show_genres sg ON t.id = sg.show_id INNER JOIN tv_genres g ON g.id = sg.genre_id WHERE g.name = 'Comedy' ORDER BY t.title;
