@@ -1,5 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys
+
 if __name__ == '__main__':
-    if len(sys.argv) == 3:
-        print('{}'.format(int(sys.argv[1]) + int(sys.argv[2])))
+    total = 0
+    for i in range(1, len(sys.argv)):
+        total += int(sys.argv[i])
+    print(total)
