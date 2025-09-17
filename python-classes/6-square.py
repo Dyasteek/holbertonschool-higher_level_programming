@@ -6,7 +6,7 @@ class Square:
     """Private instance"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Atribute init
+        """Init the size of square
 
         Args:
             size (int): size of square
@@ -35,7 +35,7 @@ class Square:
         """Atribute init
 
         Args:
-            size (int): size of square
+            value (int): size of square
         """
         if value != int(value):
             raise TypeError("size must be an integer")
@@ -45,12 +45,12 @@ class Square:
 
     @property
     def position(self):
-        """Returns the position"""
+        """Position of square"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Position of square
+        """Sets the position
 
         Args:
             value (tuple): position of square
@@ -63,13 +63,14 @@ class Square:
         """Print with #"""
         if self.__size == 0:
             print()
+            return
         else:
             for i in range(0, self.__position[1]):
                 print("")
-            for i in range(self.__size):
-                for j in range(self.__position[0]):
-                    print("#", end="")
-                for k in range(0, self.__size):
+            for i in range(0, self.__size):
+                for j in range(0, self.__position[0]):
                     print(" ", end="")
+                for k in range(self.__size):
+                    print("#", end="")
                 print()
         return
