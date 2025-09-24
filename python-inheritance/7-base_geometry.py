@@ -2,7 +2,7 @@
 """An empty class"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """An empty class"""
     def area(self):
         """An empty method"""
@@ -13,4 +13,4 @@ class BaseGeometry():
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be grater than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(name))
