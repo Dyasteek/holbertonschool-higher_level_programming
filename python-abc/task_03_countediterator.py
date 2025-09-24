@@ -14,6 +14,9 @@ class CountedIterator(Iterator):
     def get_count(self):
         return self.counter
 
+    def __iter__(self):
+        return self
+
     def __next__(self):
         self.counter += 1
         return next(self.iterator)
