@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """CountedIterator class that extends built-in iterator functionality"""
 
+from collections.abc import Iterator
 
-class CountedIterator:
+
+class CountedIterator(Iterator):
     """CountedIterator class that extends the built-in iterator"""
 
     def __init__(self, iterable):
