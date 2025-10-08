@@ -16,7 +16,7 @@ def fetch_and_print_posts() -> None:
         print("Status Code: 000")
         return
 
-    if response.ok:
+    if 200 <= response.status_code < 300:
         try:
             posts = response.json()
         except ValueError:
@@ -39,7 +39,7 @@ def fetch_and_save_posts(csv_filename: str = "posts.csv") -> None:
     except requests.RequestException:
         return
 
-    if not response.ok:
+    if not (200 <= response.status_code < 300):
         return
 
     try:
