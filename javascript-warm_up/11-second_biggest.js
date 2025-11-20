@@ -15,4 +15,3 @@ if (args.length <= 1) {
     console.log(unique[1]);
   }
 }
-
