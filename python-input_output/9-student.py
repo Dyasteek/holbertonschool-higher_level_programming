@@ -18,4 +18,3 @@ class Student:
             if isinstance(value, (list, dict, str, int, bool)):
                 result[key] = value
         return result
-
